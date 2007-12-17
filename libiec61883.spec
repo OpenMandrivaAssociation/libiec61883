@@ -13,7 +13,6 @@ License: LGPL
 Group:	System/Libraries
 Source: http://linux1394.org/dl/%{name}-%{version}.tar.bz2
 URL:	http://linux1394.org
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libraw1394-devel >= 1.2.0
 Summary: Streaming library for IEEE1394
 
