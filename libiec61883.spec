@@ -1,6 +1,6 @@
 %define	name	libiec61883
-%define	version	1.1.0
-%define	release	%mkrel 4
+%define	version	1.2.0
+%define	release	%mkrel 1
 
 %define	major	0
 %define	libname	%mklibname iec61883_ %{major}
@@ -11,7 +11,7 @@ Version: %version
 Release: %release
 License: LGPL
 Group:	System/Libraries
-Source: http://linux1394.org/dl/%{name}-%{version}.tar.bz2
+Source: http://linux1394.org/dl/%{name}-%{version}.tar.gz
 URL:	http://linux1394.org
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libraw1394-devel >= 1.2.0
@@ -80,7 +80,7 @@ rm -rf %{buildroot}
 %files -n %{libname}
 %defattr(-,root,root,-)
 %doc AUTHORS COPYING NEWS README
-%{_libdir}/libiec61883.so.*
+%{_libdir}/libiec61883.so.%{major}*
 
 %files -n %{libnamedev}
 %defattr(-,root,root,-)
