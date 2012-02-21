@@ -1,6 +1,6 @@
 %define	name	libiec61883
 %define	version	1.2.0
-%define	release	%mkrel 5
+%define	release	%mkrel 6
 
 %define	major	0
 %define	libname	%mklibname iec61883_ %{major}
