@@ -1,21 +1,17 @@
-%define	name	libiec61883
-%define	version	1.2.0
-%define	release	%mkrel 7
-
 %define	major	0
 %define	libname	%mklibname iec61883_ %{major}
 %define	libnamedev %{libname}-devel
 
-Name:	%name
-Version: %version
-Release: %release
-License: LGPL
-Group:	System/Libraries
-Source: http://linux1394.org/dl/%{name}-%{version}.tar.gz
-URL:	http://linux1394.org
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: libraw1394-devel >= 1.2.0
-Summary: Streaming library for IEEE1394
+Name:		libiec61883
+Version:	1.2.0
+Release:	8
+License:	LGPL
+Group:		System/Libraries
+Source0:	http://linux1394.org/dl/%{name}-%{version}.tar.gz
+Patch0:		libiec61883-automake-1.13.patch
+URL:		http://linux1394.org
+BuildRequires:	libraw1394-devel >= 1.2.0
+Summary:	Streaming library for IEEE1394
 
 %description 
 The libiec61883 library provides an higher level API for streaming DV,
@@ -55,6 +51,7 @@ Utilities that make use of iec61883
 
 %prep
 %setup -q
+%apply_patches
 perl -pi -e's,noinst,bin,' examples/Makefile.am
 
 %build
@@ -65,17 +62,6 @@ autoreconf -i
 %install
 rm -rf %{buildroot}
 %makeinstall
-
-%clean
-rm -rf %{buildroot}
-
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
 
 %files -n %{libname}
 %defattr(-,root,root,-)
