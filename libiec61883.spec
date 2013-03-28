@@ -55,7 +55,7 @@ Utilities that make use of iec61883
 perl -pi -e's,noinst,bin,' examples/Makefile.am
 
 %build
-autoreconf -i
+autoreconf -fi
 %configure
 %make
 
