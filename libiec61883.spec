@@ -10,7 +10,7 @@ Group:		System/Libraries
 Source0:	http://linux1394.org/dl/%{name}-%{version}.tar.gz
 Patch0:		libiec61883-automake-1.13.patch
 URL:		http://linux1394.org
-BuildRequires:	libraw1394-devel >= 1.2.0
+BuildRequires:	pkgconfig(libraw1394) >= 1.2.0
 Summary:	Streaming library for IEEE1394
 
 %description 
