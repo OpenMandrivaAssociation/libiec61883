@@ -4,7 +4,7 @@
 
 Name:		libiec61883
 Version:	1.2.0
-Release:	8
+Release:	9
 License:	LGPL
 Group:		System/Libraries
 Source0:	http://linux1394.org/dl/%{name}-%{version}.tar.gz
