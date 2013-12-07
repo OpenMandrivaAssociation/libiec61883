@@ -5,7 +5,7 @@
 Summary:	Streaming library for IEEE1394
 Name:		libiec61883
 Version:	1.2.0
-Release:	9
+Release:	10
 License:	LGPLv2
 Group:		System/Libraries
 Url:		http://linux1394.org
