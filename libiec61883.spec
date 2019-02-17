@@ -5,11 +5,11 @@
 Summary:	Streaming library for IEEE1394
 Name:		libiec61883
 Version:	1.2.0
-Release:	20
+Release:	21
 License:	LGPLv2
 Group:		System/Libraries
-Url:		http://linux1394.org
-Source0:	http://linux1394.org/dl/%{name}-%{version}.tar.gz
+Url:		http://dennedy.org/libiec61883/
+Source0:	https://mirrors.edge.kernel.org/pub/linux/libs/ieee1394/%{name}-%{version}.tar.gz
 Patch0:		libiec61883-automake-1.13.patch
 BuildRequires:	pkgconfig(libraw1394) >= 1.2.0
 
