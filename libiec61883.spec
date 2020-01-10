@@ -50,7 +50,7 @@ Utilities that make use of iec61883
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 sed -i -e's,noinst,bin,' examples/Makefile.am
 autoreconf -fi
 
