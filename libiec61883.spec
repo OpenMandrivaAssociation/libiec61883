@@ -8,7 +8,7 @@ Version:	1.2.0
 Release:	22
 License:	LGPLv2
 Group:		System/Libraries
-Url:		http://dennedy.org/libiec61883/
+Url:		https://dennedy.org/libiec61883/
 Source0:	https://mirrors.edge.kernel.org/pub/linux/libs/ieee1394/%{name}-%{version}.tar.gz
 Patch0:		libiec61883-automake-1.13.patch
 BuildRequires:	pkgconfig(libraw1394) >= 1.2.0
