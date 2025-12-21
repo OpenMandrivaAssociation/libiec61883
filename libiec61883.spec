@@ -11,6 +11,11 @@ Group:		System/Libraries
 Url:		https://dennedy.org/libiec61883/
 Source0:	https://mirrors.edge.kernel.org/pub/linux/libs/ieee1394/%{name}-%{version}.tar.gz
 Patch0:		libiec61883-automake-1.13.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(libraw1394) >= 1.2.0
 
 %description 
